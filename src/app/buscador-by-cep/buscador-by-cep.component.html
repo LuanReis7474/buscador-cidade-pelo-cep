@@ -1,0 +1,46 @@
+<div class="display">
+
+    <form [formGroup]="formSearch" class="search-box" *ngIf="!searchDone">
+        <div class="title">
+            <h1>Buscar informações da cidade pelo CEP</h1>
+        </div>
+        <div class="input-search">
+            <input formControlName="cep" type="text" id="input">
+        </div>
+        <div class="btn-search">
+            <button (click)="search()" [disabled]="!formSearch.valid">Buscar</button>
+        </div>
+    </form>
+
+
+    <!-- Resultados -->
+    <div class="datas-city" *ngIf="searchDone">
+        <div class="title">
+            <h1>Dados da cidade pesquisada</h1>    
+        </div>
+        <div class="list-datas">
+            <div class="cep-city">
+                <p>CEP: <span *ngIf="datasCity">{{datasCity.cep}}</span> </p>
+            </div>
+            <div class="name-city">
+                <p>Cidade:  <span *ngIf="datasCity">{{datasCity.localidade}}</span></p>
+            </div>
+            <div class="state-city">
+                <p>Estado:  <span *ngIf="datasCity">{{datasCity.uf}}</span></p>
+            </div>
+            <div class="state-city">
+                <p>DDD: <span *ngIf="datasCity">{{datasCity.ddd}}</span></p>
+            </div>
+            <div class="state-city" *ngIf="thereIsDistrict">
+                <p>Bairro: <span>{{datasCity.bairro}}</span></p>
+            </div>
+            <div class="state-city" *ngIf="thereIsDistrict">
+                <p>Rua: <span>{{datasCity.logradouro}}</span></p>
+            </div>      
+        </div>
+        <div class="btn-back">
+            <button (click)="back()">Voltar</button>
+        </div>
+    </div>
+
+</div>

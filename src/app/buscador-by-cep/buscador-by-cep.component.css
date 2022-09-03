@@ -1,0 +1,61 @@
+.search-box
+{
+    width:50%;
+    height: 180px;
+    color:#000000;
+    background-color: yellow;
+    margin-top: 200px;
+    padding: 10px;
+}
+.title
+{
+    display:flex;
+    justify-content: center;
+}
+.input-search
+{
+    display:flex;
+    justify-content: center;
+}
+.display
+{
+    display: flex;
+    justify-content: center;
+}
+#input
+{
+    width:60%;
+}
+.btn-search
+{
+    margin-top:40px;
+    float:right;
+}
+.btn-back
+{
+    margin-top:32px;
+    float:left;
+}
+.btn-search button
+{
+    cursor: pointer;
+    width:100px;
+}
+.btn-back button
+{
+    cursor: pointer;
+    width:100px;
+}
+.datas-city
+{
+    width:50%;
+    height: 350px;
+    color:#000000;
+    background-color: yellow;
+    margin-top: 80px;
+    padding: 10px;
+}
+.list-datas
+{
+    margin-left: 230px;
+}
